@@ -36,8 +36,10 @@
 <body>
 
   <header class="header"><!-- Начало хидер -->
+    <h2 hidden>Заголовок сайта</h2>
     <div id="headerInner">
       <nav class="topMenuRight">
+        <h2 hidden>Навигация верхнего меню</h2>
         <ul>
           <li><a href="#">Страница 1</a></li>
           <li><a href="#">Страница 2</a></li>
@@ -46,15 +48,16 @@
         </ul>
       </nav>
       <div class="share-new">
-        <a class="icon-mail" href="#" title="Подписаться на mail" target="_blanc"></a>
-        <a class="icon-rss" href="#" title="Подписаться на rss" target="_blanc"></a>
-        <a class="icon-twitter" href="#" title="Следить в Twitter" target="_blanc"></a>     
+        <a class="icon-mail" href="#" title="Подписаться на mail" target="_blank"></a>
+        <a class="icon-rss" href="#" title="Подписаться на rss" target="_blank"></a>
+        <a class="icon-twitter" href="#" title="Следить в Twitter" target="_blank"></a>     
       </div>
       <div class="logo">
         <a href="#"><img src="images/logo.png" alt="Блок"></a>
       </div>
       <!--Начало #bottomMenu-->
       <nav class="bottomMenu">
+        <h2 hidden>Навигация нижнего меню</h2>
         <ul id="dropdown_nav">
           <li><a href="#">Категория</a>
           <ul class="sub_nav">
@@ -79,6 +82,7 @@
   <!-- начало врапер -->
   
   <section id="wrapper">
+
     <div id="lpblock">
       <h2 class="last_write">Последние записи</h2>
     </div>
@@ -90,7 +94,7 @@
           
           <article class="postBox">
             <div class="postThumb">
-              <a href="#"><img width="800" height="300" src="images/tumbs/girls/9.jpg"></a>
+              <a href="#"><img width="800" height="300" src="images/tumbs/girls/9.jpg" alt="girl9"></a>
             </div>
             <h2 class="block"><a href="#">Скачать бесплатно 15 HTML5 и CSS шаблоны</a></h2>
             <div class="info">Вадим Игоревич// <a href="#">Метки: метки, метки 2</a> // Дек 08.12.2021.// Комментариев: <a href="#">238</a></div>
@@ -106,7 +110,7 @@
           <!-- Начало .postBox -->
           <article class="postBox">
             <div class="postThumb">
-              <a href="#"><img width="800" height="300" src="images/tumbs/girls/10.jpg"></a>
+              <a href="#"><img width="800" height="300" src="images/tumbs/girls/10.jpg" alt="girl10"></a>
             </div>
             <h2 class="block"><a href="#">Скачать бесплатно 15 HTML5 и CSS шаблоны</a></h2>
             <div class="info">Вадим Игоревич// <a href="#">Метки: метки, метки 2</a> // Дек 08.12.2021.// Комментариев: <a href="#">238</a></div>
@@ -124,7 +128,7 @@
           <!-- Начало .postBox -->
           <article class="postBox">
             <div class="postThumb">
-              <a href="#"><img width="800" height="300" src="images/tumbs/girls/11.jpg"></a>
+              <a href="#"><img width="800" height="300" src="images/tumbs/girls/11.jpg" alt="girl11"></a>
             </div>
             <h2 class="block"><a href="#">Скачать бесплатно 15 HTML5 и CSS шаблоны</a></h2>
             <div class="info">Вадим Игоревич// <a href="#">Метки: метки, метки 2</a> // Дек 08.12.2021.// Комментариев: <a href="#">238</a></div>
@@ -143,7 +147,7 @@
           <!-- Начало .postBox -->
           <article class="postBox">
             <div class="postThumb">
-              <a href="#"><img width="800" height="300" src="images/tumbs/girls/12.jpg"></a>
+              <a href="#"><img width="800" height="300" src="images/tumbs/girls/12.jpg" alt="girl10"></a>
             </div>
             <h2 class="block"><a href="#">Скачать бесплатно 15 HTML5 и CSS шаблоны</a></h2>
             <div class="info">Вадим Игоревич// <a href="#">Метки: метки, метки 2</a> // Дек 08.12.2021.// Комментариев: <a href="#">238</a></div>
@@ -160,10 +164,10 @@
          
         </div><!-- Конец коллефт -->
         <aside id="colRight">
-          <from method="get" action="/search" target="blank">
+          <form method="get" action="/search" target="blank">
             <input name="q" id="from-query" value="" placeholder="Поиск...">
             <input id="form-querysub" type=submit value="">
-          </from>
+          </form>
           <div class="rightBox">
             <h2>Виджет 1</h2>
             <ul>
@@ -208,11 +212,13 @@
     </div> <!-- Конец мидл -->
   </section><!-- Конец врапер -->
   <footer id="footer"><!-- Начало футер -->
+    
     <div id="footerInner">
       <div id="footerlogo">
         <a href="#"><img src="images/logo.png" alt="Блог"></a>
       </div>
       <nav class="footernav">
+        <h3 hidden>Навигация подвала сайта</h3>
         <ul>
           <li><a href="#">Страница 1</a></li>
           <li><a href="#">Страница 2</a></li>

@@ -145,9 +145,10 @@ a:hover{
   color: #fff;
   padding: 15px 22px 20px 22px;
   background: url(../images/linemenu.png) right no-repeat;
-  -moz-transition: background-color 0.3s 0.01s ease;
-  -o-transition: background-color 0.3s 0.01s ease;
   -webkit-transition: background-color 0.3s 0.01s ease;
+     -moz-transition: background-color 0.3s 0.01s ease;
+       -o-transition: background-color 0.3s 0.01s ease;
+          transition: background-color 0.3s 0.01s ease;
 }
 #dropdown_nav li a:hover{
   background: #000;
@@ -240,9 +241,10 @@ margin-top: 40px;
   font-weight: 400;
   font-size: 33px;
   line-height: 35px;
-  -moz-transition: all 0.3s, 0.01s ease;
-  -o-transition: all 0.3s, 0.01s ease;
   -webkit-transition: all 0.3s, 0.01s ease;
+     -moz-transition: all 0.3s, 0.01s ease;
+       -o-transition: all 0.3s, 0.01s ease;
+          transition: all 0.3s, 0.01s ease;
 }
 .postBox h2 a:hover{
   color: #0dbfe5;
@@ -278,7 +280,7 @@ margin-top: 40px;
   -webkit-transition: all 0.3s 0.01s ease;
      -moz-transition: all 0.3s 0.01s ease;
        -o-transition: all 0.3s 0.01s ease;
-  
+          transition: all 0.3s 0.01s ease;
 }
 .more-link a:hover{
   background: #000;

@@ -1,395 +1,556 @@
+/*---------------------------*\
+           $html
+\*---------------------------*/
+/**
+* body----------general style for the site page(общий стить для страницы сайта);
+* aside, nav, footer, header, section-----essential elements(основные элементы);
+  * ul -----------------------common for site listings(общее для списков сайта);
+  * a----------------------------------------common for links(общее для ссылок);
+      -a:hover---------------------------------------pseudo-class(псевдо-класс);
+* header-----------------------class for the site header(класс для шапки сайта);
+  * header_inner------------------inner wrapper class(класс внутренней обертки);
+    * top-menu-nav--------------Top navigation menu(верхнее навигационное меню);
+      * top-menu-nav ul--top nav menu list(список верхнего навигационного меню);
+        * top-menu-nav ul li;
+          *top-menu-nav ul li a;
+            * top-menu-nav ul li a:hover;
+    * socials-----------------block of social media icons(блок иконок соцсетей);
+      *socials a;
+        * socials .icon-mail;
+        * socials .icon-rss;
+        * socials .icon-twitter;
+  * logo----------------------------------------------------------logo(логотип);
+  * bottom-menu-nav-----------bottom navigation menu(нижнее навигационное меню);
+    * dropdown_nav;
+      * dropdown_nav li;
+        * dropdown_nav li a;
+         * dropdown_nav li a:hover;
+         * dropdown_nav li a:hover;
+      * dropdown_nav .items_nav---pop-up navigation menu(всплывающее нав. меню);
+        * dropdown_nav .items_nav li;
+          * dropdown_nav .items_nav li a;
+            * dropdown_nav .items_nav li a:hover;
+* wrapper----outer wrapper for main content(внешняя оболочка основного контента);
+  * subject---------------------------------------------------heading(заголовок);
+  * content-----------------------------------top alignment(выравнивание сверху);
+    * #content #col_left------------------------------left column(левый столбец);
+        * block;
+        * delimiter-------------------separating element(разделительный элемент);
+      * post_box-----------------------------------separate post(отдельный пост);
+        * post_box h2;
+        * post_box h2 a;
+        * post_box h2 a:hover;
+        * info;
+        * post_box .text_preview;
+        * post_box .text_preview p;
+        * post_box .post_meta;
+        * more-link------------------------------------next button(кнопка далее);
+    *  #content #col_right--------------------------right column(ghfdsq столбец);
+      * from-query-------------------------------------------search(графа поиск);
+       * form-querysub;
+        * form-querysub:hover;
+      * sidebar------------------------------------------sidebar(боковая панель);
+        * sidebar h2;
+        * sidebar ul li;
+        * sidebar a;
+        * sidebar a:hover;
+    * footer------------------------------------------------footer(подвал сайта);
+     * footer_inner;
+     * footer_logo;
+      * footer-nav;
+       * footer-nav ul;
+        * footer-nav ul li;
+          * footer-nav ul li a;
+            * footer-nav ul li a:hover;
+
+
+*/
+
+/*---------------------------*\
+           $html
+\*---------------------------*/
+
 * {
   margin: 0;
   padding: 0;
 }
-body {
-  width: 100%;
-  height: 100%;
-  color:#333;
-  background: #fff; 
-  font-family: "Segoe UI", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size:0.94em;
-  line-height:135%;
-}
-aside, nav, footer, header,section{
-  display: block;
-}
-ul{
-  list-style: none;
-}
-a{
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: none;
-}
-#wrapper{
-  margin-top: 40px;
-  width: 1200px;
-  margin: 0 auto;
-  height: auto !important;
-}
-.header{
-  width: 100%;
-  background: #0dbfe5;
-  height: 57px;
-  z-index: 4;
-}
-#headerInner{
-  position: relative;
-  border: 0 solid #333;
-  width: 1200px;
-  height: 250px;
-  margin: 0 auto;
-  margin-top: 0;
-}
-/* Верхнее правое меню */
-.topMenuRight{
-  height: 57px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border: 0 solid #1FA2E1;
-}
-.topMenuRight ul{
-  padding-left: 0;
-  list-style-type: none;
-}
-.topMenuRight ul li{
-  background: url(../images/line.png) 0 0 no-repeat;
-  float: left;
-  height: 57px;
-}
-.topMenuRight ul li a{
-  margin-top: 0;
-  font-weight: 100;
-  border-right: 0 solid #adadad;
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  line-height: 20px;
-  font-size: 18px;
-  padding: 16px 20px 21px 20px;
-}
-.topMenuRight ul li a:hover{
-  background: #fff;
-  color: #555;
-}
-.share-new{
-  z-index: 1;
-  position: absolute;
-  right: 0;
-  top: 14px;
-}
-.share-new a{
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  margin: 2px 0 2px 0;
-}
-.share-new .icon-mail{
-  background: url(../images/email-variation.png) 0 center no-repeat;
-  padding: 4px 0 0 5px;
-  font-size: 17px;
-  margin-right: 0;
-}
-.share-new .icon-rss{
-  background: url(../images/rss-variation.png) 0 center no-repeat;
-  padding: 4px 0 0 5px;
-  font-size: 17px;
-  margin-right: 0;
-}
-.share-new .icon-twitter{
-  background: url(../images/twitter-variation.png) 0 center no-repeat;
-  padding: 4px 0 0 5px;
-  font-size: 17px;
-  margin-right: 10px;
-}
-/*-----------------------------
-  Логотип
--------------------------------*/
-.logo{
-  position: absolute;
-  left: 0;
-  top: 90px;
-}
-/*-----------------------------
-  #bottomMenu
--------------------------------*/
-.bottomMenu{
-  width: 1200px;
-  height: 70px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background: url(../images/bgmenu.png) 0 0 repeat-x;
-}
-/*-----------------------------
-  #dropdown_nav
--------------------------------*/
-#dropdown_nav{
-  font-weight: bold;
-  display: inline-block;
-  list-style: none;
-  border-bottom: 0 solid #777;
-  margin-top: 18px;
-}
-#dropdown_nav li{
-  float: left;
-  position: relative;
-  display: inline-block;
-}
-#dropdown_nav li a{
-  font-weight: 100;
-  font-size: 18px;
-  color: #fff;
-  padding: 15px 22px 20px 22px;
-  background: url(../images/linemenu.png) right no-repeat;
-  -webkit-transition: background-color 0.3s 0.01s ease;
-     -moz-transition: background-color 0.3s 0.01s ease;
-       -o-transition: background-color 0.3s 0.01s ease;
-          transition: background-color 0.3s 0.01s ease;
-}
-#dropdown_nav li a:hover{
-  background: #000;
-  text-decoration: none;
-  color: #0dbfe5;
-}
-#dropdown_nav li a:first{
-  -moz-border-radius: 5px 0 0 5px;
-  -webkit-border-radius: 5px 0 0 5px;
-}
-/*-----------------------------
-  Выпадающее меню
--------------------------------*/
-#dropdown_nav .sub_nav{
-  z-index: 4;
-  width: 180px;
-  padding: 0;
-  position: absolute;
-  top: 42px;
-  left: 0;
-  border: 0 solid #ddd;
-  border-top: none;
-  background: #000;
-}
-#dropdown_nav .sub_nav li{
-  width: 160px;
-  padding: 0;
-}
-#dropdown_nav .sub_nav li a{
-  background: #000;
-  font-weight: normal;
-  font-size: 15px;
-  display: block;
-  border-bottom: 0 solid #e5e0b3;
-  padding-left: 10px;
-  color: #fff;
-}
-#dropdown_nav .sub_nav li a:hover{
-  background: #222;
-  color: #0dbfe5;
-}
-#content{
-margin-top: 40px;
-}
-#content #colLeft{
-  background: #fff;
-  float: left;
-  width: 800px;
-  margin-right: 0;
-}
-#lpblock{
-  height: 60px;
-  display: block;
-  text-align: center;
-  padding-top: 50px;
-  margin-top: 190px;
-  margin-bottom: 50px;
-  background-color: #eeeeee;
-}
-.last_write{
-  font-family: 'Cambria';
-  font-size: 40px;
-  font-weight: 400;
-  color: #a4a4a4;
-}
-.block{
-  margin: 30px 0;
-}
-.raz{
-  margin: 0 auto;
-  border: 0 solid #333;
-  background: #fff;
-  width: 116px;
-  height: 29px;
-  margin-bottom: 50px;
-  background: url(../images/raz.png) 0 0 no-repeat;
-}
-.postBox{
-  border: 0 solid #333;
-  background: #fff;
-  width: 700px;
-  margin-top: 0;
-  margin-left: 0;
-  margin-bottom: 50px;
-}
-.postBox h2 a{
-  font-family: "Segoe UI Semilight", "Segoe UI", Tahoma, Helvetica, Sans-Serif;
-  color: #000;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 33px;
-  line-height: 35px;
-  -webkit-transition: all 0.3s, 0.01s ease;
-     -moz-transition: all 0.3s, 0.01s ease;
-       -o-transition: all 0.3s, 0.01s ease;
-          transition: all 0.3s, 0.01s ease;
-}
-.postBox h2 a:hover{
-  color: #0dbfe5;
-}
-.info{
-  color: #9c9c9c;
-  margin-bottom: 30px;
-}
-.postBox .textPrevier{
-  border:  0 solid #333;
-  width: 800px;
-  margin-bottom: 30px;
-}
-.postBox .textPrevier p{
-  margin-top: 0;
-}
-.postBox .textThumb{
-  margin: 0 0 15px 0;
-}
-.postBox .postMeta{
-  padding-bottom: 15px;
-  clear: left;
-  overflow: hidden;
-}
-.more-link a{
-  border-radius: 3px;
-  background: #0dbfe5;
-  margin-top: 30px;
-  font-weight: 600;
-  color: #fff;
-  font-size: 17px;
-  padding: 6px 25px 9px 25px;
-  -webkit-transition: all 0.3s 0.01s ease;
-     -moz-transition: all 0.3s 0.01s ease;
-       -o-transition: all 0.3s 0.01s ease;
-          transition: all 0.3s 0.01s ease;
-}
-.more-link a:hover{
-  background: #000;
-  color: #0dbfe5;
-}
-#content #colRight{
-  margin-left: 45px;
-  float: left;
-  width: 350px;
-  position: relative;
-}
-#middle:after{
-content: '.';
-display: block;
-clear: both;
-visibility: hidden;
-height: 0;
-}
-#from-query{
-  position: relative;
-  background: #eeeeee;
-  border: 0 solid #e4e4e4;
-  width: 335px;
-  height: 31px;
-  padding: 8px 10px 7px;
-  font-weight: 100;
-  font-size: 18px;
-  color: #000;
-  margin-bottom: 30px;
-}
-#form-querysub{
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 17px;
-  height: 17px;
-  border: 0 solid #e4e4e4;;
-  background: url(../images/search.png) 0 0 no-repeat;
-}
-#form-querysub:hover{
-  cursor: pointer;
-}
-.rightBox{
-  margin-top: 0;
-  margin-left: 0;
-  width: 330px;
-  margin-bottom: 30px;
-}
-.rightBox h2{
-  width: 335px;
-  background: #f7f7f7 url(../images/h2img.png) 320px 14px no-repeat;
-  font-size: 18px;
-  font-family: "Segoe UI Semibold", Tahoma, Helvetica, Sans-Serif;
-  color: #333;
-  display: block;
-  padding: 10px 0 15px 20px;
-}
-.rightBox ul li{
-  width: 350px;
-  padding: 10px 0;
-  border-bottom: 1px solid #f6f6f6;
-  font-size: 14px;
-  line-height: 16px;
-  list-style-type: none;
-}
-.rightBox a{
-  color: #333;
-}
-.rightBox a:hover{
-  color: #0dbfe5;
-}
-#footer{
-  margin-top: 50px;
-  height: 100px;
-  width: 100%;
-  background: #0dbfe5;
-}
-#footerInner{
-  position: relative;
-  border: 0 solid #000;
-  width: 1200px;
-  margin: 0 auto;
-  height: 100px;
-}
-#footerlogo{
-  position: absolute;
-  left: 0;
-  top: 25px;
-}
-.footernav{
-  position: absolute;
-  right: 0;
-  top: 35px;
-}
-.footernav ul li{
-  float: left;
-  list-style-type: none;
-}
-.footernav ul li a{
-  margin-top: 0;
-  font-weight: 100;
-  border-right: 0 solid #adadad;
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  line-height: 20px;
-  font-size: 18px;
-  padding: 0 0 0 25px;
-}
-.footernav ul li a:hover{
-  color: #333;
-}
+
+/*---------------------------*\
+            $body
+\*---------------------------*/
+
+  body {
+    font-family: "Segoe UI", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",   Helvetica, Arial, sans-serif;
+    font-size:0.94em;
+    line-height:135%;
+      width: 100%;
+      height: 100%;
+        color:#333;
+          background: #fff; 
+      
+    }
+
+    /*---------------------------*\
+          $aside, $nav, $footer,
+          $header, $section
+    \*---------------------------*/
+
+    aside, nav, footer, header, section{
+      display: block;
+    }
+
+      /*---------------------------*\
+                  $ul
+      \*---------------------------*/
+
+        ul{
+          list-style: none;
+        }
+
+        /*---------------------------*\
+                    $a
+        \*---------------------------*/
+
+        a{
+          text-decoration: none;
+        }
+          a:hover{
+            text-decoration: none;
+          }
+
+      /*---------------------------*\
+              $header
+      \*---------------------------*/
+
+      .header{
+        width: 100%;
+        height: 57px;
+          z-index: 4;
+            background: #0dbfe5;
+        
+      }
+
+        /*---------------------------*\
+              $header_inner
+        \*---------------------------*/
+
+        #header_inner{
+          width: 1200px;
+          height: 250px;
+          margin: 0 auto;
+          margin-top: 0;
+          border: 0 solid #333;
+          position: relative;
+        }
+
+          /*---------------------------*\
+                  $top-menu-nav
+          \*---------------------------*/
+
+          .top-menu-nav{
+            height: 57px;
+            position: absolute;
+              top: 0;  
+              left: 0;
+              border: 0 solid #1FA2E1;
+          }
+              
+              .top-menu-nav ul{
+                padding-left: 0;
+                list-style-type: none;
+              }
+
+                .top-menu-nav ul li{
+                  height: 57px;
+                    float: left;
+                      background: url(../images/line.png) 0 0 no-repeat;
+                }
+                  .top-menu-nav ul li a{
+                    font-size: 18px;
+                    font-weight: 100;
+                    line-height: 20px;
+                      padding: 16px 20px 21px 20px;
+                      margin-top: 0;
+                      color: #fff;
+                        display: block;
+                         border-right: 0 solid #adadad;
+                          text-decoration: none;
+                  }
+                    .top-menu-nav ul li a:hover{
+                      color: #555;
+                        background: #fff;
+                    }
+          /*---------------------------*\
+                      $socials
+          \*---------------------------*/
+
+          .socials{
+            z-index: 1;
+              position: absolute;
+                right: 0;
+                top: 14px;
+          }
+            .socials a{
+              display: inline-block;
+              width: 19px;
+              height: 19px;
+              margin: 2px 0 2px 0;
+            }
+              .socials .icon-mail{
+                font-size: 17px;
+                margin-right: 0;
+                padding: 4px 0 0 5px;
+                background: url(../images/email-variation.png) 0 center no-repeat;
+              }
+              .socials .icon-rss{
+                font-size: 17px;
+                  padding: 4px 0 0 5px;
+                  margin-right: 0;
+                    background: url(../images/rss-variation.png) 0 center no-repeat;
+              }
+              .socials .icon-twitter{
+                font-size: 17px;
+                 padding: 4px 0 0 5px;
+                 margin-right: 10px;
+                  background: url(../images/twitter-variation.png) 0 center no-repeat;
+              }
+      /*-----------------------------*\
+                $logo
+      \*-----------------------------*/
+      .logo{
+        position: absolute;
+          top: 90px;
+          left: 0;  
+      }
+      /*-----------------------------*\
+            #bottom-menu-nav
+      \*-----------------------------*/
+      .bottom-menu-nav{
+        width: 1200px;
+        height: 70px;
+          position: absolute;
+            left: 0;
+            bottom: 0;
+              background: url(../images/bgmenu.png) 0 0 repeat-x;
+      }
+        /*-----------------------------
+          #dropdown_nav
+        -------------------------------*/
+        #dropdown_nav{
+          font-weight: bold;
+            margin-top: 18px;
+              border-bottom: 0 solid #777;
+                display: inline-block;
+                list-style: none;  
+        }
+          #dropdown_nav li{
+            float: left;
+            position: relative;
+            display: inline-block;
+          }
+            #dropdown_nav li a{
+              font-weight: 100;
+              font-size: 18px;
+              color: #fff;
+              padding: 15px 22px 20px 22px;
+              background: url(../images/linemenu.png) right no-repeat;
+              -webkit-transition: background-color 0.3s 0.01s ease;
+                -moz-transition: background-color 0.3s 0.01s ease;
+                  -o-transition: background-color 0.3s 0.01s ease;
+                      transition: background-color 0.3s 0.01s ease;
+            }
+              #dropdown_nav li a:hover{
+                color: #0dbfe5;
+                  text-decoration: none;
+                    background: #000;
+              }
+              #dropdown_nav li a:first{
+                -webkit-border-radius: 5px 0 0 5px;
+                   -moz-border-radius: 5px 0 0 5px;
+                        border-radius: 5px 0 0 5px;
+                
+              }
+
+            /*----------------------------*\
+                $dropdown_nav .items_nav
+            \*----------------------------*/
+
+            #dropdown_nav .items_nav{
+              
+              width: 180px;
+                padding: 0;
+                  border: 0 solid #ddd;
+                  border-top: none;
+                   background: #000;
+                    z-index: 4;
+                    position: absolute;
+                      top: 42px;
+                      left: 0;
+            }
+                #dropdown_nav .items_nav li{
+                  width: 160px;
+                    padding: 0;
+                }
+                  #dropdown_nav .items_nav li a{
+                    font-size: 15px;
+                    font-weight: normal;
+                      padding-left: 10px;
+                      color: #fff;
+                        border-bottom: 0 solid #e5e0b3;
+                          background: #000;
+                            display: block; 
+                  }
+                    #dropdown_nav .items_nav li a:hover{
+                      color: #0dbfe5;
+                        background: #222;
+                    }
+    /*---------------------------*\
+              $wrapper
+    \*---------------------------*/
+    
+    #wrapper{ 
+      width: 1200px;
+      height: auto !important;
+        margin: 0 auto;
+          margin-top: 40px;
+    } 
+
+      /*---------------------------*\
+                $subject
+      \*---------------------------*/
+
+      #subject{
+        height: 60px;
+        display: block;
+        text-align: center;
+        padding-top: 50px;
+        margin-top: 190px;
+        margin-bottom: 50px;
+        background-color: #eeeeee;
+      }
+        .last_write{
+          font-family: 'Cambria';
+          font-size: 40px;
+          font-weight: 400;
+          color: #a4a4a4;
+        }
+       
+      /*---------------------------*\
+              $content
+      \*---------------------------*/
+
+      #content{
+        margin-top: 40px;
+      }
+        #content #col_left{
+          background: #fff;
+          float: left;
+          width: 800px;
+          margin-right: 0;
+        }
+          
+              .block{
+                margin: 30px 0;
+              }
+                .delimiter{
+                  margin: 0 auto;
+                  border: 0 solid #333;
+                  background: #fff;
+                  width: 116px;
+                  height: 29px;
+                  margin-bottom: 50px;
+                  background: url(../images/raz.png) 0 0 no-repeat;
+                }
+
+        /*----------------------------*\
+                  $post_box
+        \*----------------------------*/
+
+        .post_box{
+          width: 700px;
+            margin-top: 0;
+            margin-left: 0;
+            margin-bottom: 50px;
+            border: 0 solid #333;
+              background: #fff;
+        }
+          .post_box h2 a{
+            font-family: "Segoe UI Semilight", "Segoe UI", Tahoma, Helvetica, Sans-Serif;
+            color: #000;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 33px;
+            line-height: 35px;
+            -webkit-transition: all 0.3s, 0.01s ease;
+              -moz-transition: all 0.3s, 0.01s ease;
+                -o-transition: all 0.3s, 0.01s ease;
+                    transition: all 0.3s, 0.01s ease;
+          }
+            .post_box h2 a:hover{
+              color: #0dbfe5;
+            }
+        .info{
+          color: #9c9c9c;
+           margin-bottom: 30px;
+        }
+            .post_box .text_preview{
+              border:  0 solid #333;
+              width: 800px;
+              margin-bottom: 30px;
+            }
+              .post_box .text_preview p{
+                margin-top: 0;
+              }
+              .post_box .picture{
+                margin: 0 0 15px 0;
+              }
+              .post_box .post_meta{
+                padding-bottom: 15px;
+                clear: left;
+                overflow: hidden;
+              }
+          .more-link a{
+            border-radius: 3px;
+            background: #0dbfe5;
+            margin-top: 30px;
+            font-weight: 600;
+            color: #fff;
+            font-size: 17px;
+            padding: 6px 25px 9px 25px;
+            -webkit-transition: all 0.3s 0.01s ease;
+              -moz-transition: all 0.3s 0.01s ease;
+                -o-transition: all 0.3s 0.01s ease;
+                    transition: all 0.3s 0.01s ease;
+          }
+            .more-link a:hover{
+              background: #000;
+              color: #0dbfe5;
+            }
+        
+        /*---------------------------*\
+                $ol_right
+        \*---------------------------*/
+
+        #content #col_right{
+          width: 350px;
+            margin-left: 45px;
+              float: left;
+                position: relative;
+        }
+            #middle:after{
+              height: 0;
+                content: '.';
+                display: block;
+                clear: both;
+                visibility: hidden;
+            }
+
+      /*---------------------------*\
+                from-query
+      \*---------------------------*/
+
+      #from-query{
+        font-size: 18px;
+        font-weight: 100;
+          width: 335px;
+          height: 31px;
+          padding: 8px 10px 7px;
+          margin-bottom: 30px;
+            color: #000;
+            border: 0 solid #e4e4e4;
+              position: relative;
+                background: #eeeeee;
+      }
+        #form-querysub{
+          position: absolute;
+            right: 15px;
+            top: 15px;
+              width: 17px;
+              height: 17px;
+                border: 0 solid #e4e4e4;;
+                  background: url(../images/search.png) 0 0 no-repeat;
+        }
+          #form-querysub:hover{
+            cursor: pointer;
+          }
+
+      /*---------------------------*\
+                  $sidebar
+      \*---------------------------*/
+
+      .sidebar{
+        margin-top: 0;
+        margin-left: 0;
+        width: 330px;
+        margin-bottom: 30px;
+      }
+      .sidebar h2{
+        font-family: "Segoe UI Semibold", Tahoma, Helvetica, Sans-Serif;
+        font-size: 18px;
+          width: 335px;
+            padding: 10px 0 15px 20px;
+              color: #333;
+                display: block;
+                  background: #f7f7f7 url(../images/h2img.png) 320px 14px no-repeat;
+        
+        }
+        .sidebar ul li{
+          width: 350px;
+          padding: 10px 0;
+          border-bottom: 1px solid #f6f6f6;
+          font-size: 14px;
+          line-height: 16px;
+          list-style-type: none;
+        }
+        .sidebar a{
+          color: #333;
+        }
+        .sidebar a:hover{
+          color: #0dbfe5;
+        }
+
+    /*---------------------------*\
+                  $footer
+    \*---------------------------*/
+    
+    #footer{
+      margin-top: 50px;
+      height: 100px;
+      width: 100%;
+      background: #0dbfe5;
+    }
+    #footer_inner{
+      position: relative;
+      border: 0 solid #000;
+      width: 1200px;
+      margin: 0 auto;
+      height: 100px;
+    }
+    #footer--logo{
+      position: absolute;
+      left: 0;
+      top: 25px;
+    }
+    .footer-nav{
+      position: absolute;
+      right: 0;
+      top: 35px;
+    }
+    .footer-nav ul li{
+      float: left;
+      list-style-type: none;
+    }
+    .footer-nav ul li a{
+      margin-top: 0;
+      font-weight: 100;
+      border-right: 0 solid #adadad;
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      line-height: 20px;
+      font-size: 18px;
+      padding: 0 0 0 25px;
+    }
+    .footer-nav ul li a:hover{
+      color: #333;
+    }
